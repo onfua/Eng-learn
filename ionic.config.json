@@ -1,5 +1,7 @@
 {
   "name": "Eng-learn",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -22,14 +22,18 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+/* Pages */
+import Splash from './pages/splash/splash';
+import Home from './pages/home/home';
+
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/">
-        </Route>
+        <Route exact path="/" component={Splash}/>
+        <Route exact path="/home" component={Home}/>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
